@@ -5,6 +5,7 @@ const Product = require("./models/product.model.js");
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: false })); //FORM URL
 
 app.get("/", (req, res) => {
   res.send("Hello from Node Api Server Updated");
